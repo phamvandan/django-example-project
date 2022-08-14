@@ -33,9 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # authentication and authorization
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    'django.contrib.sessions', # database-backed sessions
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
@@ -126,3 +126,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Authen
 LOGIN_URL = '/polls/login'
 LOGOUT_REDIRECT_URL = '/polls/logout'
+
+# Session expire
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
